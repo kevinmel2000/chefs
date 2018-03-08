@@ -1,0 +1,13 @@
+server {
+	listen 80;
+	listen [::]:80;
+
+	root /usr/share/nginx/hello-agus.com/html;
+	index index.html index.htm;
+
+	server_name hello-agus.com;
+	
+	location / {
+		try_files $uri $uri/ =404;
+	}
+}
